@@ -8,18 +8,17 @@
 
 name: NanoPi-NEO2 Build OpenWrt
 
-on: 
-  release:
-    types: [published]
-  push:
-    branches: 
-      - master
-    paths:
-      - '.config'
+on:
+  repository_dispatch:
 #  schedule:
-#    - cron: 0 2 * * 0
+#    - cron: '10 0 * * *'
+
+  push:
+    branches:
+      - master
+
   watch:
-    types: [started]
+    types: started
 
 jobs:
   build:
