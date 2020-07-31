@@ -10,7 +10,7 @@ name: NanoPi Neo2 Build OpenWrt
 
 on: 
   release:
-    types: [published]
+    types: published
   push:
     branches: 
       - master
