@@ -9,8 +9,7 @@
 name: NanoPi Neo2 Build OpenWrt
 
 on: 
-  release:
-    types: published
+
   push:
     branches: 
       - master
@@ -19,7 +18,7 @@ on:
 #  schedule:
 #    - cron: 0 2 * * 0
   watch:
-    types: started
+    types: [started]
 
 jobs:
   build:
